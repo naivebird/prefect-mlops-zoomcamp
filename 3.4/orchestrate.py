@@ -87,7 +87,7 @@ def train_best_model(
             pickle.dump(dv, f_out)
         mlflow.log_artifact("models/preprocessor.b", artifact_path="preprocessor")
 
-        mlflow.lr.log_model(lr, artifact_path="models_mlflow")
+        mlflow.sklearn.log_model(lr, artifact_path="models_mlflow")
     return None
 
 
